@@ -24,6 +24,8 @@ FILENAME="lyft_training_data.tar.gz"
 
 download_and_uncompress "${BASE_URL}" "${FILENAME}"
 
+rm "${FILENAME}"
+
 cd "${CURRENT_DIR}"
 
 # Root path for lyft dataset.

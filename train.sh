@@ -1,0 +1,18 @@
+python train.py \
+    --logtostderr \
+    --training_number_of_steps=10 \
+    --train_split="train" \
+    --model_variant="xception_65" \
+    --atrous_rates=6 \
+    --atrous_rates=12 \
+    --atrous_rates=18 \
+    --output_stride=16 \
+    --decoder_output_stride=4 \
+    --train_crop_size=600 \
+    --train_crop_size=800 \
+    --train_batch_size=2 \
+    --dataset="lyft" \
+    --tf_initial_checkpoint=pretrained_model/model.ckpt \
+    --train_logdir=logs \
+    --dataset_dir=datasets/lyft/tfrecord \
+    --initialize_last_layer=False

@@ -1,0 +1,14 @@
+python export_model.py \
+  --logtostderr \
+  --checkpoint_path=logs/model.ckpt-30000 \
+  --export_path=frozen_inference_graph.pb \
+  --model_variant="xception_65" \
+  --atrous_rates=6 \
+  --atrous_rates=12 \
+  --atrous_rates=18 \
+  --output_stride=16 \
+  --decoder_output_stride=4 \
+  --num_classes=3 \
+  --crop_size=600 \
+  --crop_size=800 \
+  --inference_scales=1.0

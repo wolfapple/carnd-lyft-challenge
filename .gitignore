@@ -3,3 +3,5 @@ __pycache__
 datasets/lyft
 logs
 pretrained_model
+frozen_inference_graph.pb
+.ipynb_checkpoints

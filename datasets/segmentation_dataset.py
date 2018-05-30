@@ -109,7 +109,7 @@ _ADE20K_INFORMATION = DatasetDescriptor(
 
 _LYFT_INFORMATION = DatasetDescriptor(
     splits_to_sizes={
-        'train': 1000,  # num of samples in images/training
+        'train': 3000,  # num of samples in images/training
         'val': 0,  # num of samples in images/validation
     },
     num_classes=3,

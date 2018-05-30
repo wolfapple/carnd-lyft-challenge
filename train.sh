@@ -1,6 +1,6 @@
 python train.py \
     --logtostderr \
-    --training_number_of_steps=10 \
+    --training_number_of_steps=30000 \
     --train_split="train" \
     --model_variant="xception_65" \
     --atrous_rates=6 \
@@ -10,7 +10,8 @@ python train.py \
     --decoder_output_stride=4 \
     --train_crop_size=600 \
     --train_crop_size=800 \
-    --train_batch_size=2 \
+    --train_batch_size=4 \
+    --fine_tune_batch_norm=False \
     --dataset="lyft" \
     --tf_initial_checkpoint=pretrained_model/model.ckpt \
     --train_logdir=logs \

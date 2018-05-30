@@ -23,4 +23,4 @@ FILENAME="deeplabv3_cityscapes_train_2018_02_06.tar.gz"
 
 download_and_uncompress "${BASE_URL}" "${FILENAME}"
 rm "${FILENAME}"
-mv deeplabv3_cityscapes_train pretrained_model
+mv deeplabv3_cityscapes_train ./pretrained_model

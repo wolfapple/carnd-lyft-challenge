@@ -18,9 +18,9 @@ class DeeplabModel(object):
   
   def __init__(self):
       self.graph = tf.Graph()
-      pb_file = open('frozen_inference_graph.pb', 'rb')
+      pb_file = tf.gfile.GFile('frozen_inference_graph.pb', 'rb')
       graph_def = tf.GraphDef.FromString(pb_file.read())
-      pb_file.close()
+      # pb_file.close()
       
       with self.graph.as_default():
         tf.import_graph_def(graph_def, name='')

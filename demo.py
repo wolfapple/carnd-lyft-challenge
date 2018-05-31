@@ -28,8 +28,6 @@ class DeeplabModel(object):
       self.sess = tf.Session(graph=self.graph)
       
   def predict(self, image):
-      width = image.shape[0]
-      height = image.shape[1]
       batch_seg_map = self.sess.run(
           self.OUTPUT_TENSOR_NAME,
           feed_dict={self.INPUT_TENSOR_NAME: [np.asarray(image)]})

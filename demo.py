@@ -24,8 +24,13 @@ class DeeplabModel(object):
       
       with self.graph.as_default():
         tf.import_graph_def(graph_def, name='')
+
+      config = tf.ConfigProto()
+      # JIT level, this can be set to ON_1 or ON_2 
+      jit_level = tf.OptimizerOptions.ON_1
+      config.graph_options.optimizer_options.global_jit_level = jit_level
       
-      self.sess = tf.Session(graph=self.graph)
+      self.sess = tf.Session(graph=self.graph, config=config)
       
   def predict(self, image):
       batch_seg_map = self.sess.run(
